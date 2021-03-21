@@ -1,0 +1,38 @@
+
+:root {
+  --slide-start: 0px;
+  --slide-end: -2000px;
+  --slide-duration: 25s;
+}
+
+.bg-gradient {
+  background-color: #fff1eb;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+.slide-left {
+  -webkit-animation: slide-left var(--slide-duration) linear infinite alternate both;
+  animation: slide-left var(--slide-duration) linear infinite alternate both
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(var(--slide-start));
+    transform: translateX(var(--slide-start))
+  }
+  100% {
+    -webkit-transform: translateX(var(--slide-end));
+    transform: translateX(var(--slide-end))
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(var(--slide-start));
+    transform: translateX(var(--slide-start))
+  }
+  100% {
+    -webkit-transform: translateX(var(--slide-end));
+    transform: translateX(var(--slide-end))
+  }
+}
