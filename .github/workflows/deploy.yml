@@ -21,7 +21,7 @@ jobs:
 
       - name: Build
         run: |
-          npm install -g tailwindcss-cli@2.0.4
+          npm install -g tailwindcss-cli@0.1.2
           tailwindcss-cli build ./src/tailwind.css -o ./dist/tailwind.css
 
       - name: Deploy
