@@ -7,8 +7,6 @@ on:
 
 jobs:
   deploy:
-    env:
-      NODE_ENV: production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,8 +27,8 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
+          NODE_ENV: production
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "eu-north-1"
-          SOURCE_DIR: "public"
